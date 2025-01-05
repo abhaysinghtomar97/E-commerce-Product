@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Product Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    // Enable dark mode feature
+    tailwind.config = {
+      darkMode: 'class', // Enables class-based dark mode
+    };
+  </script>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+    <style>
+       yle>
+        *{
+            margin:0;
+            padding:0;
+        }
+        .container{
+            /* background-color: rgb(24, 103, 42); */
+            min-height: 100vh;
+            max-height: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        .sidebar{
+            /* background-color: rgb(58, 58, 101); */
+            width:30%;
+            margin-top: 50px;
+            
+        }
+        .sidebar h2{
+            color: white;
+            
+            text-align: center;
+            padding: 10px;
+        }
+        .sidebar ul{
+            list-style-type: none;
+            padding: 10px;
+            margin-left: 20px;
+            
+            color: yellow;
+            
+
+        }
+        .products{
+            
+            /* margin:50px; */
+            margin-top: 50px;
+            padding: 50px;
+            /* background-color: burlywood; */
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            gap:20px;
+            width: 70%;
+            justify-content: center;
+            
+        }
+        .product{
+            /* background-color: white; */
+            padding: 30px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 100%;
+        }
+        .product img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 4px;
+            margin-bottom: 15px;
+        }
+
+        .product h2 {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .product p {
+            color: #666;
+            margin: 10px 0;
+        }
+
+        .product button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .product button a {
+            color: white;
+            text-decoration: none;
+        }
+        @media (max-width:900px){
+          .container{
+                /* background-color: aqua; */
+            }
+            .products{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+           
+        @media (max-width:700px){
+          .container{
+                /* background-color: rgb(216, 101, 48); */
+                
+
+            }
+            .products{
+                grid-template-columns: repeat(1,1fr);
+                
+        }
+           
+         
+    </style>
+
+  <div class="min-h-screen container flex">
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+      <h2 class="text-xl font-bold mb-4">Filters</h2>
+      <ul class="space-y-4">
+        <li>
+          <h3 class="font-semibold">Categories</h3>
+          <ul class="ml-4 space-y-2">
+            <li><label><input type="checkbox" class="mr-2">Electronics</label></li>
+            <li><label><input type="checkbox" class="mr-2">Clothing</label></li>
+            <li><label><input type="checkbox" class="mr-2">Books</label></li>
+          </ul>
+        </li>
+        <li>
+          <h3 class="font-semibold">Price Range</h3>
+          <div class="">
+            <input type="number" placeholder="Min" class="border rounded p-1 w-16 dark:bg-gray-700">
+            <span>-</span>
+            <input type="number" placeholder="Max" class="border rounded p-1 w-16 dark:bg-gray-700">
+          </div>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Product Grid -->
+    <div class="products">
+      
+     
+        <!-- Product Card -->
+        <div class="product ">
+          <img src="https://via.placeholder.com/150" alt="Product Image">
+          <h2 >Product Name</h2>
+          <p >$25.00</p>
+          <button class=" hover:bg-blue-600">Add to Cart</button>
+        </div>
+
+        <div class="product ">
+          <img src="https://via.placeholder.com/150" alt="Product Image">
+          <h2 >Product Name</h2>
+          <p >$25.00</p>
+          <button class=" hover:bg-blue-600">Add to Cart</button>
+        </div>
+
+        <div class="product ">
+          <img src="https://via.placeholder.com/150" alt="Product Image">
+          <h2 >Product Name</h2>
+          <p >$25.00</p>
+          <button class=" hover:bg-blue-600">Add to Cart</button>
+        </div>
+
+        <div class="product ">
+          <img src="https://via.placeholder.com/150" alt="Product Image">
+          <h2 >Product Name</h2>
+          <p >$25.00</p>
+          <button class=" hover:bg-blue-600">Add to Cart</button>
+        </div>
+
+        <div class="product ">
+          <img src="https://via.placeholder.com/150" alt="Product Image">
+          <h2 >Product Name</h2>
+          <p >$25.00</p>
+          <button class=" hover:bg-blue-600">Add to Cart</button>
+        </div>
+
+
+        <div class="product ">
+          <img src="https://via.placeholder.com/150" alt="Product Image">
+          <h2 >Product Name</h2>
+          <p >$25.00</p>
+          <button class=" hover:bg-blue-600">Add to Cart</button>
+        </div>
+
+
+        <div class="product ">
+          <img src="https://via.placeholder.com/150" alt="Product Image">
+          <h2 >Product Name</h2>
+          <p >$25.00</p>
+          <button class=" hover:bg-blue-600">Add to Cart</button>
+        </div>
+
+
+        <div class="product ">
+          <img src="https://via.placeholder.com/150" alt="Product Image">
+          <h2 >Product Name</h2>
+          <p >$25.00</p>
+          <button class=" hover:bg-blue-600">Add to Cart</button>
+        </div>
+      </div>
+    
+  </div>
+
+  <!-- Dark Mode Toggle -->
+  <button onclick="document.documentElement.classList.toggle('dark')" class="fixed bottom-4 right-4 bg-gray-800 text-white px-4 py-2 rounded-full shadow-lg">
+    Toggle Dark Mode
+  </button>
+
+</body>
+</html>
